@@ -1,19 +1,19 @@
-import React from 'react';
+import React, {useState} from 'react';
 import logo from './logo.svg';
-import LikeButton from './components/LikeButton'
-import MouseTracker from './components/MouseTracker'
+import MouseTracker from './components/MouseTracker';
 
 import './App.css';
 
-function App() {
+const App: React.FC = () => {
+  const [show, setShow] = useState(true);
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
         <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+          <button onClick={() => {setShow(!show);}}>Toggle Tracker</button>
         </p>
-        <MouseTracker></MouseTracker>
+        {show && <MouseTracker></MouseTracker>}
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -25,6 +25,6 @@ function App() {
       </header>
     </div>
   );
-}
+};
 
 export default App;

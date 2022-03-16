@@ -14,7 +14,8 @@ const MouseTracker: React.FC = () => {
       console.log('remove effect', positions.x)
       document.removeEventListener('click', updateMouse);
     };
-  });
+    // 传递空数组，表示effect不依赖props或者state的任何值，所以它永远不会重复执行。
+  }, []);
   console.log('before render', positions.x)
   return (
     <p>X: {positions.x}, Y: {positions.y}</p>
