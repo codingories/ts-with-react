@@ -1,13 +1,18 @@
 import React from 'react';
 
-// 定义传入的参数类型
-// 好处1.会有自动补全 2. 使用的时候获得验证
+
 interface IHelloProps {
-  message: string;
+  message?: string;
 }
 
-const Hello = (props: IHelloProps) => {
+// 通过React.FunctionComponent这个接口来实现
+const Hello: React.FC<IHelloProps> = (props) => {
   return <h2>{props.message}</h2>;
+};
+
+// 这样写了之后会有默认值
+Hello.defaultProps = {
+  message: 'Hello World123'
 };
 
 export default Hello;

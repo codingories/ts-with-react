@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c14bbff7-dd0a-4f70-bf4c-44dba0209ee9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/LikeButton.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
@@ -29,6 +30,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
@@ -50,7 +52,8 @@
       <option name="presentableId" value="Default" />
       <updated>1647323728713</updated>
       <workItem from="1647323731972" duration="310000" />
-      <workItem from="1647324060945" duration="765000" />
+      <workItem from="1647324060945" duration="1834000" />
+      <workItem from="1647401698156" duration="777000" />
     </task>
     <servers />
   </component>
