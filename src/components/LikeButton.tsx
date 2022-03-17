@@ -1,4 +1,5 @@
-import React, {useState, useEffect, useRef} from 'react';
+import React, {useState, useEffect, useRef, useContext} from 'react';
+import {ThemeContext} from '../App';
 import useMousePosition from '../hooks/useMousePositions';
 
 const LikeButton: React.FC = () => {
@@ -6,7 +7,12 @@ const LikeButton: React.FC = () => {
   const likeRef = useRef(0);
   const didMountRef = useRef(false);
   const domRef = useRef<HTMLInputElement>(null);
-
+  const theme = useContext(ThemeContext);
+  console.log(theme);
+  const style = {
+    background: theme.background,
+    color: theme.color
+  }
   useEffect(() => {
     // 一开始是false，第一次设置为true
     if (didMountRef.current) {
@@ -31,7 +37,7 @@ const LikeButton: React.FC = () => {
   return (
     <>
       <input type="text" ref={domRef}></input>
-      <button onClick={() => {
+      <button style={style} onClick={() => {
         setLike(like + 1);
         likeRef.current++;
       }}>

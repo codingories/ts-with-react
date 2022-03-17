@@ -1,16 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import {ThemeContext} from '../App';
 
 
 interface IHelloProps {
   message?: string;
 }
 
-// 通过React.FunctionComponent这个接口来实现
 const Hello: React.FC<IHelloProps> = (props) => {
-  return <h2>{props.message}</h2>;
+  const theme = useContext(ThemeContext);
+  const style = {
+    background: theme.background,
+    color: theme.color
+  }
+  return <h2 style={style}>{props.message}</h2>;
 };
 
-// 这样写了之后会有默认值
 Hello.defaultProps = {
   message: 'Hello World123'
 };
