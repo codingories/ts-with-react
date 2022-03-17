@@ -15,18 +15,18 @@ interface IShowResult {
 
 
 const App: React.FC = () => {
-  const [show, setShow] = useState(true);
-  const [data, loading] = useURLLoader('https://dog.ceo/api/breeds/image/random', [show]);
-  const dogResult = data as IShowResult;
+  // const [show, setShow] = useState(true);
+  // const [data, loading] = useURLLoader('https://dog.ceo/api/breeds/image/random', [show]);
+  // const dogResult = data as IShowResult;
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
         <LikeButton></LikeButton>
-        <p>
-          <button onClick={() => {setShow(!show);}}>Refresh dog photo</button>
-        </p>
-        {loading ? <p>🐶读取中</p> : <img src={dogResult && dogResult.message}></img>}
+        {/*<p>*/}
+        {/*  <button onClick={() => {setShow(!show);}}>Refresh dog photo</button>*/}
+        {/*</p>*/}
+        {/*{loading ? <p>🐶读取中</p> : <img src={dogResult && dogResult.message}></img>}*/}
       </header>
     </div>
   );
