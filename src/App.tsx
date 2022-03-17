@@ -7,6 +7,7 @@ import LikeButton from './components/LikeButton';
 import useMousePosition from './hooks/useMousePositions';
 import useURLLoader from './hooks/useURLLoader';
 
+
 interface IShowResult {
   message: string;
   status: string;
@@ -21,6 +22,7 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo"/>
+        <LikeButton></LikeButton>
         <p>
           <button onClick={() => {setShow(!show);}}>Refresh dog photo</button>
         </p>
