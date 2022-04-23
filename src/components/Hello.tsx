@@ -16,7 +16,7 @@ const Hello: React.FC<IHelloProps> = (props) => {
 };
 
 Hello.defaultProps = {
-  message: 'Hello World123'
+  message: 'Hello World1235'
 };
 
 export default Hello;
